@@ -18,7 +18,7 @@ import QGroundControl.SettingsManager   1.0
 import QGroundControl.Controls          1.0
 
 FirstRunPrompt {
-    title:      qsTr("Vehicle Information")
+    title:      qsTr("Vehicle Information!")
     promptId:   QGroundControl.corePlugin.offlineVehicleFirstRunPromptId
 
     property real   _margins:               ScreenTools.defaultFontPixelWidth
@@ -33,7 +33,7 @@ FirstRunPrompt {
         QGCLabel {
             id:                     unitsSectionLabel
             Layout.preferredWidth:  valueRect.width
-            text:                   qsTr("Specify information about the vehicle you plan to fly. If you are unsure of the correct values leave them as is.")
+            text:                   qsTr("Please specify information about the vehicle you plan to fly (If you are unsure of the correct values leave them as is!)")
             wrapMode:               Text.WordWrap
         }
 
@@ -53,6 +53,17 @@ FirstRunPrompt {
 
                 QGCLabel {
                     Layout.fillWidth:   true
+                    text:               qsTr("Vehicle")
+                    visible:            _multipleVehicleTypes
+                }
+                FactComboBox {
+                    Layout.preferredWidth:  _fieldWidth
+                    fact:                   QGroundControl.settingsManager.appSettings.offlineEditingVehicleClass
+                    indexModel:             false
+                    visible:                _multipleVehicleTypes
+                }
+                QGCLabel {
+                    Layout.fillWidth:   true
                     text:               qsTr("Firmware")
                     visible:            _multipleFirmware
                 }
@@ -63,17 +74,7 @@ FirstRunPrompt {
                     visible:                _multipleFirmware
                 }
 
-                QGCLabel {
-                    Layout.fillWidth:   true
-                    text:               qsTr("Vehicle")
-                    visible:            _multipleVehicleTypes
-                }
-                FactComboBox {
-                    Layout.preferredWidth:  _fieldWidth
-                    fact:                   QGroundControl.settingsManager.appSettings.offlineEditingVehicleClass
-                    indexModel:             false
-                    visible:                _multipleVehicleTypes
-                }
+
             }
         }
     }

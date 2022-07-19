@@ -18,7 +18,7 @@ import QGroundControl.SettingsManager 1.0
 import QGroundControl.Controls 1.0
 
 FirstRunPrompt {
-    title:      qsTr("Measurement Units")
+    title:      qsTr("Measurement Units!")
     promptId:   QGroundControl.corePlugin.unitsFirstRunPromptId
 
     property real   _margins:           ScreenTools.defaultFontPixelHeight / 2
@@ -61,7 +61,7 @@ FirstRunPrompt {
 
         QGCLabel {
             id:         unitsSectionLabel
-            text:       qsTr("Choose the measurement units you want to use. You can also change it later in General Settings.")
+            text:       qsTr("Choose the measurement units you want to use. You will have the ability to change it later in General Settings.")
 
             Layout.preferredWidth: unitsGrid.width
             wrapMode: Text.WordWrap
