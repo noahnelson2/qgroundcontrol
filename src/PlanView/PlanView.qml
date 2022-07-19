@@ -600,6 +600,13 @@ Item {
                         }
                     },
                     ToolStripAction {
+                        text:               qsTr("Center")
+                        iconSource:         "/qmlimages/MapCenter.svg"
+                        enabled:            true
+                        visible:            true
+                        dropPanelComponent: centerMapDropPanel
+                    },
+                    ToolStripAction {
                         id:                 addWaypointRallyPointAction
                         text:               _editingLayer == _layerRallyPoints ? qsTr("Rally Point") : qsTr("Waypoint")
                         iconSource:         "/qmlimages/MapAddMission.svg"
@@ -645,14 +652,8 @@ Item {
                             toolStrip.allAddClickBoolsOff()
                             insertLandItemAfterCurrent()
                         }
-                    },
-                    ToolStripAction {
-                        text:               qsTr("Center")
-                        iconSource:         "/qmlimages/MapCenter.svg"
-                        enabled:            true
-                        visible:            true
-                        dropPanelComponent: centerMapDropPanel
                     }
+
                 ]
             }
 
@@ -751,22 +752,23 @@ Item {
                 //-------------------------------------------------------
                 // Mission Controls (Expanded)
                 QGCTabBar {
-                    id:         layerTabBar
-                    width:      parent.width
-                    visible:    (!planControlColapsed || !_airspaceEnabled) && QGroundControl.corePlugin.options.enablePlanViewSelector
-                    Component.onCompleted: currentIndex = 0
-                    QGCTabButton {
-                        text:       qsTr("Mission")
-                    }
-                    QGCTabButton {
-                        text:       qsTr("Fence")
-                        enabled:    _geoFenceController.supported
-                    }
-                    QGCTabButton {
-                        text:       qsTr("Rally")
-                        enabled:    _rallyPointController.supported
-                    }
-                }
+                                    id:         layerTabBar
+                                    width:      parent.width
+                                    visible:    (!planControlColapsed || !_airspaceEnabled) && QGroundControl.corePlugin.options.enablePlanViewSelector
+                                    Component.onCompleted: currentIndex = 0
+                                    QGCTabButton {
+                                        text:       qsTr("Mission")
+                                    }
+                                    QGCTabButton {
+                                        text:       qsTr("Rally")
+                                        enabled:    _rallyPointController.supported
+                                    }
+                                    QGCTabButton {
+                                        text:       qsTr("Fence")
+                                        enabled:    _geoFenceController.supported
+                                    }
+
+                                }
             }
             //-------------------------------------------------------
             // Mission Item Editor

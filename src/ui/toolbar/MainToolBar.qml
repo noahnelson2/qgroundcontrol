@@ -72,10 +72,7 @@ Rectangle {
             onClicked:              mainWindow.showToolSelectDialog()
         }
 
-        MainStatusIndicator {
-            Layout.preferredHeight: viewButtonRow.height
-            visible:                currentToolbar === flyViewToolbar
-        }
+
 
         QGCButton {
             id:                 disconnectButton
@@ -83,6 +80,11 @@ Rectangle {
             onClicked:          _activeVehicle.closeVehicle()
             visible:            _activeVehicle && _communicationLost && currentToolbar === flyViewToolbar
         }
+    }
+
+    MainStatusIndicator {
+        anchors.right:          parent.right
+        visible:                currentToolbar === flyViewToolbar
     }
 
     QGCFlickable {
