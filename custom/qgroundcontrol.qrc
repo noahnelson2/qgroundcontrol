@@ -72,7 +72,6 @@
 		<file alias="OfflineMap.qml">../src/QtLocationPlugin/QMLControl/OfflineMap.qml</file>
 		<file alias="PlanToolBar.qml">../src/PlanView/PlanToolBar.qml</file>
 		<file alias="PlanToolBarIndicators.qml">../src/PlanView/PlanToolBarIndicators.qml</file>
-		<file alias="PlanView.qml">../src/PlanView/PlanView.qml</file>
 		<file alias="PreFlightCheckList.qml">../src/FlightDisplay/PreFlightCheckList.qml</file>
 		<file alias="PX4FlowSensor.qml">../src/VehicleSetup/PX4FlowSensor.qml</file>
 		<file alias="QGCInstrumentWidget.qml">../src/FlightMap/Widgets/QGCInstrumentWidget.qml</file>
@@ -108,7 +107,6 @@
 		<file alias="QGroundControl/Controls/KMLOrSHPFileDialog.qml">../src/QmlControls/KMLOrSHPFileDialog.qml</file>
 		<file alias="QGroundControl/Controls/LogReplayStatusBar.qml">../src/QmlControls/LogReplayStatusBar.qml</file>
 		<file alias="QGroundControl/Controls/MainStatusIndicator.qml">../src/ui/toolbar/MainStatusIndicator.qml</file>
-		<file alias="QGroundControl/Controls/MainToolBar.qml">../src/ui/toolbar/MainToolBar.qml</file>
 		<file alias="QGroundControl/Controls/MainWindowSavedState.qml">../src/QmlControls/MainWindowSavedState.qml</file>
 		<file alias="QGroundControl/Controls/MAVLinkChart.qml">../src/QmlControls/MAVLinkChart.qml</file>
 		<file alias="QGroundControl/Controls/MAVLinkMessageButton.qml">../src/QmlControls/MAVLinkMessageButton.qml</file>
@@ -210,7 +208,6 @@
 		<file alias="QGroundControl/FlightDisplay/FlyViewToolStrip.qml">../src/FlightDisplay/FlyViewToolStrip.qml</file>
 		<file alias="QGroundControl/FlightDisplay/FlyViewToolStripActionList.qml">../src/FlightDisplay/FlyViewToolStripActionList.qml</file>
 		<file alias="QGroundControl/FlightDisplay/FlyViewVideo.qml">../src/FlightDisplay/FlyViewVideo.qml</file>
-		<file alias="QGroundControl/FlightDisplay/FlyViewWidgetLayer.qml">../src/FlightDisplay/FlyViewWidgetLayer.qml</file>
 		<file alias="QGroundControl/FlightDisplay/GuidedActionActionList.qml">../src/FlightDisplay/GuidedActionActionList.qml</file>
 		<file alias="QGroundControl/FlightDisplay/GuidedActionConfirm.qml">../src/FlightDisplay/GuidedActionConfirm.qml</file>
 		<file alias="QGroundControl/FlightDisplay/GuidedActionsController.qml">../src/FlightDisplay/GuidedActionsController.qml</file>
@@ -282,6 +279,8 @@
 		<file alias="VTOLLandingPatternEditor.qml">../src/PlanView/VTOLLandingPatternEditor.qml</file>
 	</qresource>
 	<qresource prefix="/FirstRunPromptDialogs">
+		<file alias="UnitsFirstRunPrompt.qml">../src/FirstRunPromptDialogs/UnitsFirstRunPrompt.qml</file>
+		<file alias="OfflineVehicleFirstRunPrompt.qml">../src/FirstRunPromptDialogs/OfflineVehicleFirstRunPrompt.qml</file>
 	</qresource>
 	<qresource prefix="/json">
 		<file alias="ADSBVehicleManager.SettingsGroup.json">../src/Settings/ADSBVehicleManager.SettingsGroup.json</file>

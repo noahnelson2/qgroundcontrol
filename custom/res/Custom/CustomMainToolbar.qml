@@ -72,11 +72,6 @@ Rectangle {
             onClicked:              mainWindow.showToolSelectDialog()
         }
 
-        MainStatusIndicator {
-            anchors.right:          parent.right
-            visible:                currentToolbar === flyViewToolbar
-        }
-
         QGCButton {
             id:                 disconnectButton
             text:               qsTr("Disconnect")
@@ -85,10 +80,13 @@ Rectangle {
         }
     }
 
-
+    MainStatusIndicator {
+        anchors.right:          parent.right
+        visible:                currentToolbar === flyViewToolbar
+    }
 
     QGCFlickable {
-       id:                     toolsFlickable
+        id:                     toolsFlickable
         anchors.leftMargin:     ScreenTools.defaultFontPixelWidth * ScreenTools.largeFontPointRatio * 1.5
         anchors.left:           viewButtonRow.right
         anchors.bottomMargin:   1

@@ -18,7 +18,7 @@ import QGroundControl.SettingsManager   1.0
 import QGroundControl.Controls          1.0
 
 FirstRunPrompt {
-    title:      qsTr("V")
+    title:      qsTr("Vehicle Information")
     promptId:   QGroundControl.corePlugin.offlineVehicleFirstRunPromptId
 
     property real   _margins:               ScreenTools.defaultFontPixelWidth

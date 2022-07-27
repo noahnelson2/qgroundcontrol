@@ -30,7 +30,8 @@
     </qresource>
     <qresource prefix="/qml">
         <file alias="QGroundControl/FlightDisplay/FlyViewCustomLayer.qml">res/CustomFlyViewOverlay.qml</file>
-        <file alias="OfflineVehicleFirstRunPrompt.qml">res/Custom/CustomOfflineVehicleFirstRunPrompt.qml</file>
-        <file alias="UnitsFirstRunPrompt.qml">res/Custom/CustomUnitsFirstRunPrompt.qml</file>
+        <file alias="PlanView.qml">res/Custom/CustomPlanView.qml</file>
+        <file alias="QGroundControl/FlightDisplay/FlyViewWidgetLayer.qml">res/Custom/CustomFlyViewWidgetLayer.qml</file>
+        <file alias="QGroundControl/Controls/MainToolBar.qml">res/Custom/CustomMainToolbar.qml</file>
     </qresource>
 </RCC>
